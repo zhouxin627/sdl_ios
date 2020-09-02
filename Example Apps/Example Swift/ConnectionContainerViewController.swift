@@ -32,6 +32,12 @@ class ConnectionContainerViewController: UIViewController {
         rightSwipe.direction = .right
         view.addGestureRecognizer(leftSwipe)
         view.addGestureRecognizer(rightSwipe)
+
+        NotificationCenter.default.addObserver(forName: Notification.Name("SDLConnected"), object: nil, queue: .main) { _ in
+            let storyboard = UIStoryboard(name: "PresentVCTest", bundle: nil)
+            let vc = storyboard.instantiateInitialViewController()!
+            self.present(vc, animated: true)
+        }
     }
 
     override func didReceiveMemoryWarning() {

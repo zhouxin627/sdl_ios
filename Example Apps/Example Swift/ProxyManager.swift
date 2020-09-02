@@ -250,6 +250,10 @@ private extension ProxyManager {
     /// Set the template and create the UI
     func showInitialData() {
         guard sdlManager.hmiLevel == .full else { return }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            NotificationCenter.default.post(name: Notification.Name("SDLConnected"), object: nil)
+        }
         
         let setDisplayLayout = SDLSetDisplayLayout(predefinedLayout: .nonMedia)
         sdlManager.send(setDisplayLayout)

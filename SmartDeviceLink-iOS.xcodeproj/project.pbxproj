@@ -291,6 +291,8 @@
 		4A40254224FFDA660080E159 /* SDLTextAndGraphicUpdateOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A40253E24FFDA660080E159 /* SDLTextAndGraphicUpdateOperation.h */; };
 		4A40254324FFDA660080E159 /* SDLTextAndGraphicUpdateOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40253F24FFDA660080E159 /* SDLTextAndGraphicUpdateOperation.m */; };
 		4A40254424FFDA660080E159 /* SDLTextAndGraphicState.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A40254024FFDA660080E159 /* SDLTextAndGraphicState.h */; };
+		4A40255024FFF8250080E159 /* PresentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40254F24FFF8250080E159 /* PresentVC.swift */; };
+		4A402551250008E00080E159 /* PresentVCTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A40254C24FFF7E20080E159 /* PresentVCTest.storyboard */; };
 		4A457DC324A2933E00386CBA /* SDLLifecycleRPCAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A457DC224A2933E00386CBA /* SDLLifecycleRPCAdapterSpec.m */; };
 		4A457DD324A3886700386CBA /* SDLLifecycleSyncPDataHandlerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A457DD224A3886700386CBA /* SDLLifecycleSyncPDataHandlerSpec.m */; };
 		4A457DD524A3C16E00386CBA /* SDLLifecycleMobileHMIStateHandlerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A457DD424A3C16E00386CBA /* SDLLifecycleMobileHMIStateHandlerSpec.m */; };
@@ -2070,6 +2072,8 @@
 		4A40253E24FFDA660080E159 /* SDLTextAndGraphicUpdateOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDLTextAndGraphicUpdateOperation.h; path = private/SDLTextAndGraphicUpdateOperation.h; sourceTree = "<group>"; };
 		4A40253F24FFDA660080E159 /* SDLTextAndGraphicUpdateOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDLTextAndGraphicUpdateOperation.m; path = private/SDLTextAndGraphicUpdateOperation.m; sourceTree = "<group>"; };
 		4A40254024FFDA660080E159 /* SDLTextAndGraphicState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDLTextAndGraphicState.h; path = private/SDLTextAndGraphicState.h; sourceTree = "<group>"; };
+		4A40254C24FFF7E20080E159 /* PresentVCTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PresentVCTest.storyboard; sourceTree = "<group>"; };
+		4A40254F24FFF8250080E159 /* PresentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PresentVC.swift; path = "Example Apps/Example Swift/PresentVC.swift"; sourceTree = SOURCE_ROOT; };
 		4A457DC224A2933E00386CBA /* SDLLifecycleRPCAdapterSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDLLifecycleRPCAdapterSpec.m; path = DevAPISpecs/SDLLifecycleRPCAdapterSpec.m; sourceTree = "<group>"; };
 		4A457DD224A3886700386CBA /* SDLLifecycleSyncPDataHandlerSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDLLifecycleSyncPDataHandlerSpec.m; path = DevAPISpecs/SDLLifecycleSyncPDataHandlerSpec.m; sourceTree = "<group>"; };
 		4A457DD424A3C16E00386CBA /* SDLLifecycleMobileHMIStateHandlerSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDLLifecycleMobileHMIStateHandlerSpec.m; path = DevAPISpecs/SDLLifecycleMobileHMIStateHandlerSpec.m; sourceTree = "<group>"; };
@@ -4189,6 +4193,15 @@
 				4A40253F24FFDA660080E159 /* SDLTextAndGraphicUpdateOperation.m */,
 			);
 			name = "Update Operation";
+			sourceTree = "<group>";
+		};
+		4A40254E24FFF8070080E159 /* PresentTest */ = {
+			isa = PBXGroup;
+			children = (
+				4A40254C24FFF7E20080E159 /* PresentVCTest.storyboard */,
+				4A40254F24FFF8250080E159 /* PresentVC.swift */,
+			);
+			name = PresentTest;
 			sourceTree = "<group>";
 		};
 		4A4AD8A12489422F008FC414 /* Utilities */ = {
@@ -6554,9 +6567,7 @@
 			children = (
 				5D1FF2F4213047B2000EB9B4 /* LaunchScreen.xib */,
 				88A0AA5F207CFEA60075132C /* Connection */,
-				5D1FF2E82130479C000EB9B4 /* ConnectionContainerViewController.swift */,
-				5D1FF2EA2130479C000EB9B4 /* ConnectionIAPTableViewController.swift */,
-				5D1FF2E92130479C000EB9B4 /* ConnectionTCPTableViewController.swift */,
+				4A40254E24FFF8070080E159 /* PresentTest */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -6616,6 +6627,9 @@
 			isa = PBXGroup;
 			children = (
 				88A0AA60207CFEAC0075132C /* Storyboards */,
+				5D1FF2E82130479C000EB9B4 /* ConnectionContainerViewController.swift */,
+				5D1FF2EA2130479C000EB9B4 /* ConnectionIAPTableViewController.swift */,
+				5D1FF2E92130479C000EB9B4 /* ConnectionTCPTableViewController.swift */,
 			);
 			name = Connection;
 			sourceTree = "<group>";
@@ -7630,6 +7644,7 @@
 				5D1FF2C7213045F2000EB9B4 /* Images.xcassets in Resources */,
 				5D1FF2F5213047B3000EB9B4 /* LaunchScreen.xib in Resources */,
 				5D1FF2F2213047AB000EB9B4 /* ConnectionIAPTableViewController.storyboard in Resources */,
+				4A402551250008E00080E159 /* PresentVCTest.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -8743,6 +8758,7 @@
 				5D1FF2EB2130479C000EB9B4 /* ConnectionContainerViewController.swift in Sources */,
 				889E7BAF249CEE07002E4BE1 /* SubscribeButtonManager.swift in Sources */,
 				5D1FF2E021304746000EB9B4 /* MenuManager.swift in Sources */,
+				4A40255024FFF8250080E159 /* PresentVC.swift in Sources */,
 				5D1FF2DF21304746000EB9B4 /* PerformInteractionManager.swift in Sources */,
 				5D1FF2ED2130479C000EB9B4 /* ConnectionIAPTableViewController.swift in Sources */,
 				5D1FF2DD21304746000EB9B4 /* RPCPermissionsManager.swift in Sources */,
