@@ -333,7 +333,11 @@ NS_ASSUME_NONNULL_BEGIN
 
         while (self.ioStreamThread != nil && !self.ioStreamThread.cancelled) {
             // Enqueued data will be written to and read from the streams in the runloop
-            [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.25f]];
+            BOOL result = [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.25f]];
+            if (!result) {
+                SDLLogE(@"The run loop returned a failure even though the input and output streams should be attached. Input stream: %@ Output stream: %@ Accessory: %@", self.eaSession.inputStream, self.eaSession.outputStream, self.accessory);
+                break;
+            }
         }
 
         SDLLogD(@"Closing the accessory event loop on thread: %@", NSThread.currentThread.name);
